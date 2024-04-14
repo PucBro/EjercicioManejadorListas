@@ -23,7 +23,7 @@ public class Yellow {
             
                 switch(opcion){
                     case "1":
-                        System.out.print("Ingrese el nombre de la lista o escriba exit para volver al menú principal:  ");
+                        System.out.print("Ingrese el nombre de la lista ");
                         String nombre =sc.nextLine();
                         switch (nombre){
                             case "exit":

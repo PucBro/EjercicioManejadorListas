@@ -70,9 +70,23 @@ public class Yellow {
                         break;
                     case "2":
                         System.out.println("Lista de listas ingrese el numero de la lista que desea ver o escriba exit para volver al menú principal: ");
-
                         
+                        nombresListas.getNombresListas(nombresListas);
+                        String listaElegida=sc.nextLine();
+                        if(listaElegida=="exit"){
+                            break; 
+                        }else{
+                            int listaElegidaInt=Integer.parseInt(listaElegida);
+                            listaElegida=nombresListas.get(listaElegidaInt);
+                            Listas listaMostrada=listasMap.get(listaElegida);
+                            for(int i=0;i< listaMostrada.elementos.length;i++){
+                                System.out.println(i+ "."+ " "+ listaMostrada.get(i));
+                            }
+                            System.out.println("Presione enter para continuar");
+                            sc.nextLine();
+                        }
                         break;
+
                     case "3":
                         System.out.println("Lista de listas ingrese el numero de la lista que desea modificar o escriba exit para volver al menú principal: ");
                         break;

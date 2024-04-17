@@ -33,6 +33,6 @@ Independientemente de la opción (a excepción de salir) siempre debo poder regr
 # Consideraciones con la resolución:
 
 Yellow.java es el archivo principal. Todavía faltan algunas cosas a mejorar como por ejemplo si el usuario mete otra cosa que no es entero cuando se le pide un entero y si el usuario mete un número que no está dentro de la lista.
-En esta solución se utilizaron las clases Hashmap y map para guardar los nombres de las diferentes listas que el usuario vaya escribiendo e ir accediendo a estas 
+En esta versión ya no se utilizan las clases Map o Hashmap
 
 

@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 class Listas{
 
     String[] elementos=new String[0];
@@ -49,6 +50,7 @@ class Listas{
                 nuevoArreglo[i-1]=elementos[i];
             }
         }
+        elementos=nuevoArreglo;
     }
 
     void moverElemento(int pos1, int pos2){

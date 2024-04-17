@@ -1,12 +1,11 @@
 import java.util.Scanner;
-import java.util.Map;
-import java.util.HashMap;
+
 
 public class Yellow {
 
     public static void main(String[] args) {
         
-        Map<String, Listas> listasMap = new HashMap<>();
+        Dict listasMap = new Dict();
         Scanner sc =new Scanner(System.in);
         Boolean permanecer=true;
         Listas nombresListas=new Listas();
@@ -34,7 +33,7 @@ public class Yellow {
                                 System.out.print("Ingrese el tamaño de la lista: ");
                                 int tamaño = Integer.parseInt(sc.nextLine());//Esto se hace asi porque con nextInt hay un pequeño bug con un salto de linea 
                                 nuevaLista.create(tamaño);
-                                listasMap.put(nombre, nuevaLista);
+                                listasMap.addLista(nombre, nuevaLista);
                         }
                         break;
                     case "2":
@@ -49,7 +48,7 @@ public class Yellow {
 
                                 listaElegida=nombresListas.get(listaElegidaInt); //Se saca el nombre de la lista elegida
 
-                                Listas listaMostrada=listasMap.get(listaElegida);// Se saca la lista elegida
+                                Listas listaMostrada=listasMap.getLista(listaElegida);// Se saca la lista elegida
 
                                 listaMostrada.getNombresListas(listaMostrada);// Muestra todos los elementos de la lista al usuario
 
@@ -73,7 +72,7 @@ public class Yellow {
                                 //falta validar que el numero de la lista elegida sea valido pues si no se cae el programa
                                 listaElegida1=nombresListas.get(listaElegida1Int); //Se saca el nombre de la lista elegida
 
-                                Listas listaMostrada1=listasMap.get(listaElegida1); //Se saca la lista elegida
+                                Listas listaMostrada1=listasMap.getLista(listaElegida1); //Se saca la lista elegida
 
                                 //Vamos a hacer un bucle para que puedan quedarse todo el tiempo que quieran modificando la lista
                                 Boolean permanecer1=true;
